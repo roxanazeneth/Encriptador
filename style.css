@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    background: #fffefd;
+    align-items: center;
+}
+
+.logo{
+    position: relative;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.contenedor{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #fffefd;
+}
+
+.textoEncriptar{
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    border: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color:#fffefd;
+    font-family: "Montserrat", sans-serif;
+}
+
+.textoEncriptar::placeholder{
+   color: #2a091c;
+   font-family: "Montserrat", sans-serif;
+}
+
+.textoEncriptar:focus, .textoEncriptar:active{
+    border: none;
+    outline: none;
+}
+
+.condiciones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 80%;
+}
+
+.condiciones p{
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+}
+
+.btnEncriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    color: #58293b;
+    border-radius: 12px;
+    border: 2px solid #80516b;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    transition: 400ms;
+}
+
+.btnDesencriptar{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    color: #58293b;
+    border: 2px solid #80516b;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    transition: 400ms;
+}
+
+.btnEncriptar:hover, .btnDesencriptar:hover{
+    background-color: #80516b;
+    color: #fffefd;
+    margin: 0.8;
+    width: 24%;
+    padding: 1.8%;
+}
+
+.ladoDesencriptar{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 4%;
+    background: #b2809b;
+    color: #200000;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.contenedor-muneco{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 15%;
+}
+
+.mensaje-desencriptado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+}
+
+.mensaje-desencriptado h2{
+    width: 60%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #200000;
+}
+
+.mensaje-desencriptado p{
+    width: 80%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+.contenedor-copiar{
+    display: flex;
+    position: absolute;
+    top: 600px;
+    padding-left: 40px;
+}
+
+.contenedor-resultado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #200000;
+    top: 500px;
+}
+
+.btnCopiar{
+    position: relative;
+    width: 328px;
+    height: 67px;
+    top: 2px;
+    right: 4px;
+    border-radius: 24px;
+    background-color: #f4f4fc;
+    color: #58293b;
+    font-size: 16px;
+    font-weight: 400;
+    border: 2px solid #80516b;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.btnCopiar:hover{
+    background-color: #80516b;
+    color: #fffefd;
+    margin: 0.9%;
+}
+
+.ocultar{
+    display: none;
+}
+
+/* R E S P O N S I V O */
+@media (max-width:57.5em){
+    .logo{
+        position: relative;
+        align-items: center;
+        top: 2%;
+    }
+
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ladoDesencriptar{
+        width: 100%;
+    }
+
+    .textoEncriptar{
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        top:3%;
+    }
+
+    .condiciones{
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+
+    .condiciones p{
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .botones, .contenedor-copiar{
+        width: 80%;
+        left: 10%;
+        top: 60%;
+    }
+
+    .btnCopiar{
+        width: 80%;
+        left: 10%;
+        top: 90px;
+    }
+
+    .btnEncriptar, .btnDesencriptar, .btnCopiar{
+        width: 48%;
+        border-radius: 16px;
+    }
+
+    .btnEncriptar:hover, .btnDesencriptar:hover{
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+
+    .ladoDesencriptar{
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+    }
+
+    .mensaje-desencriptado{
+        width: 100%;
+        top: 5%;
+    }
+
+    .mensaje-desencriptado h2{
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .mensaje-desencriptado p{
+        font-size: 14px;
+    }
+
+    .ladoDesencriptar img{
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+}

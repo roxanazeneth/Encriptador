@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>1._ESP_Challenge_-_Encriptador_vfinal_1</title>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://www.aluracursos.com/" target="_blank"><img src="img/logo2.png"></a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="contenedor">
+            <div class="ladoEncriptar">
+                <textarea id="textoEncriptar" class="textoEncriptar" placeholder="Ingresa el texto aquí" cols="30" rows="10"></textarea>
+            </div>
+            <div class="condiciones">
+                <p>&#9888 Solamente ingresar letras minúsculas y sin acentos</p>
+            </div>
+            <div class="botones">
+                <button class="btnEncriptar" type="button" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btnDesencriptar" type="button" onclick="btnDesencriptar()">Desencriptar</button>
+            </div>
+        
+            <div class="ladoDesencriptar">
+                <div class="contenedor-muneco">
+                    <img src="img/muneco.png" alt="" id="muneco">
+                </div>
+                <div class="mensaje-desencriptado" id="mensaje-desencriptado">
+                    <h2 id="tituloMensaje">No se ha encontrado ningún mensaje</h2>
+                    <p id="parrafo">Ingresa el texto a desencriptar</p>
+                </div>
+                <div class="contenedor-copiar">
+                    <button class="btnCopiar" type="button" onclick="btnCopiar()">Copiar</button>
+                </div>
+                <div class="contenedor-resultado">
+                    <p class="resultado"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+</body>
+
+<script src="appEncrip.js"></script>
+
+</html>
